@@ -27,6 +27,11 @@ int main()
     cout<<"     -----         -------------         -----          -----    -----      ------     -------------"<<endl;
     cout<<endl; cout<<endl; cout<<endl; cout<<endl; cout<<endl;
     cout<<"                                       PRESS ANY KEY TO START"<<endl;
+    cout<<endl; cout<<endl; cout<<endl; cout<<endl; cout<<endl;
+    cout<<"Sterowanie:"<<endl;
+    cout<<endl;cout<<"a-rusz spadajacy blok w lewo"<<endl;
+    cout<<endl;cout<<"d-rusz spadajacy blok w prawo"<<endl;
+    cout<<endl;cout<<"z-obroc spadajacy blok"<<endl;
     getch();
 
 
@@ -161,7 +166,7 @@ int main()
         {
             game[currentblockposx[i]][currentblockposy[i]]=0;
             currentblockposx[i]=currentblockposx[i]+1;
-            if(currentblockposx[i]==0 && currentblockposx[i+1]==2 )
+            if(currentblockposx[i]==1 && game[currentblockposx[i+1]][currentblockposy[i]]==2 )
                 endgame=1;
 
         }
@@ -728,6 +733,19 @@ int main()
     if(endgame==1)
         break;
     }
+    cout<<"-----------------   ------------   -----------------    ------------        ------     -------------"<<endl;
+    cout<<"|               |  |           |   |               |    |           |       |    |     |           |"<<endl;
+    cout<<"------    -------  |    --------   ------    -------    |   |     |  |      |    |     |   ---------"<<endl;
+    cout<<"     |   |         |   |                 |   |          |   |     |  |      |    |     |   |        "<<endl;
+    cout<<"     |   |         |    --------         |   |          |           |       |    |     |   ---------"<<endl;
+    cout<<"     |   |         |           |         |   |          |   ------|         |    |     |           |"<<endl;
+    cout<<"     |   |         |    --------         |   |          |   |-   -          |    |     -------     |"<<endl;
+    cout<<"     |   |         |   |                 |   |          |   | |    |        |    |            |    |"<<endl;
+    cout<<"     |   |         |   ---------         |   |          |   |  -    -       |    |    ---------    |"<<endl;
+    cout<<"     |   |         |           |         |   |          |   |   |    |      |    |    |            |"<<endl;
+    cout<<"     -----         -------------         -----          -----    -----      ------     -------------"<<endl;
+    cout<<endl; cout<<endl; cout<<endl; cout<<endl; cout<<endl;
+    cout<<"                                      GAME OVER"<<endl;
 
     return 0;
 }
